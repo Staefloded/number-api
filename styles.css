@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@900&family=Open+Sans&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 3rem;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.header h1 {
+  font-size: 5rem;
+  font-family: "Big Shoulders Inline Text", cursive;
+  text-transform: uppercase;
+}
+
+.search--container {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  width: 50rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.search--container i {
+  font-size: 2rem;
+  color: rgb(5, 45, 102);
+}
+
+.search--container input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  justify-content: space-between;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.8s;
+}
+
+.contact a {
+  font-size: 3rem;
+  color: rgb(5, 45, 102);
+}
+
+.contact h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+
+.contact--error {
+  background-color: rgb(255, 0, 0);
+  padding: 1rem;
+  margin: 0 auto;
+  font-size: 2rem;
+  width: fit-content;
+  color: #f2f2f2;
+  transition: 0.3s all;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+  text-align: center;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+
+  .search--container {
+    width: 100%;
+  }
+
+  .output {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+
+  .output {
+    grid-template-columns: 1fr;
+  }
+}
